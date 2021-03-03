@@ -150,7 +150,7 @@ def func_if_aligned_repeat(aligned_ref, aligned_seq, pattern):
     if len(aligned_ref) == len(pattern):
         mismatch_num, gap_num = func_score_on_unit(aligned_ref, aligned_seq)
         # if gap_num <=2 and mismatch_num == 0:
-        if gap_num//len(pattern) < 0.4:
+        if gap_num/len(pattern) < 0.4:
             return True
         # elif gap_num == 0 and mismatch_num <= 2:  # 2 or 1?
         elif gap_num == 0 and mismatch_num/len(pattern) < 0.4:
